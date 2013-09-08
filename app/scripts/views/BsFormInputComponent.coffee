@@ -14,11 +14,11 @@ SELF.reopenClass
 	validInputTypes: 'text password datetime datetime-local date month time week number email url search tel color'.split /\s/g
 
 # now we add all the isText, isPassword, isDatetime, ... helpers (setters and getters)
-extends = {}
+mixin = {}
 for inputType in SELF.validInputTypes
 	prop = Ember.String.camelize inputType
-	extends["is#{Ember.String.capitalize prop}"] = Bootstrap.createBoundSwitchAccessor inputType, 'type', 'text'
-SELF.reopen extends
+	mixin["is#{Ember.String.capitalize prop}"] = Bootstrap.createBoundSwitchAccessor inputType, 'type', 'text'
+SELF.reopen mixin
 
 # Since we're extending TextField we need to register ourself
 Ember.Handlebars.registerHelper 'bs-form-input', Bootstrap.BsFormInputComponent

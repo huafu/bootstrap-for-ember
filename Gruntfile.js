@@ -300,6 +300,7 @@ module.exports = function (grunt) {
         concurrent: {
             server: [
                 'compass',
+                'markdown',
                 'ember_handlebars',
                 'coffee:dist'
             ],
@@ -308,6 +309,7 @@ module.exports = function (grunt) {
             ],
             dist: [
                 'coffee',
+                'markdown',
                 'ember_handlebars',
                 'compass',
                 'imagemin',
@@ -340,6 +342,7 @@ module.exports = function (grunt) {
                         '<%= yeoman.app %>/templates/components/bs-progressbar.hbs'
                         ],
                     '.tmp/scripts/bs-pills.js': '<%= yeoman.app %>/templates/components/bs-pills.hbs',
+                    '.tmp/scripts/bs-modal.js': '<%= yeoman.app %>/templates/components/bs-modal.hbs'
                 }
             },
             compile_showcase: {

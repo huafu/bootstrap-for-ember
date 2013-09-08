@@ -4,6 +4,8 @@ Bootstrap.Register = Ember.Mixin.create(
         @_super()
         # Components
         @BsAlertComponent = Bootstrap.BsAlertComponent if Bootstrap.BsAlertComponent?
+        @BsModalComponent = Bootstrap.BsModalComponent if Bootstrap.BsModalComponent?
+        @BsWizardComponent = Bootstrap.BsWizardComponent if Bootstrap.BsWizardComponent?
         @BsLabelComponent = Bootstrap.BsLabelComponent if Bootstrap.BsLabelComponent?
         @BsBadgeComponent = Bootstrap.BsBadgeComponent if Bootstrap.BsBadgeComponent?
         @BsWellComponent = Bootstrap.BsWellComponent if Bootstrap.BsWellComponent?

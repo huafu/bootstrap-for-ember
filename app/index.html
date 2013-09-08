@@ -40,6 +40,7 @@
         <script src="bower_components/bootstrap/js/transition.js"></script>
         <script src="scripts/init.js"></script>
         <script src="scripts/mixins/Register.js"></script>
+        <script src="scripts/mixins/WithRouter.js"></script>
         <script src="scripts/mixins/type.js"></script>
         <script src="scripts/mixins/size.js"></script>
 
@@ -51,6 +52,8 @@
         <script src="scripts/mixins/NavItem.js"></script>
         <script src="scripts/views/ItemView.js"></script>
         <script src="scripts/views/ItemsView.js"></script>
+        <script src="scripts/views/ItemPaneView.js"></script>
+        <script src="scripts/views/ItemsPanesView.js"></script>
         <!-- endbuild -->
 
         <!--COMPONENTS -->
@@ -95,11 +98,38 @@
         <!-- build:js({.tmp,app}) js/bs-nav.min.js-->
         <script src="scripts/components/BsPill.js"></script>
         <script src="scripts/components/BsPills.js"></script>
+        <script src="scripts/components/BsTabPane.js"></script>
+        <script src="scripts/components/BsTabsPanes.js"></script>
         <script src="scripts/components/BsTabs.js"></script>
         <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) js/bs-notifications.js-->
+        <!-- build:js({.tmp,app}) js/bs-notifications.min.js-->
         <script src="scripts/components/Notifications.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) js/bs-growl-notifications.min.js-->
+        <script src="scripts/components/GrowlNotifications.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:css({.tmp,app}) css/bs-growl-notifications.min.css -->
+        <link rel="stylesheet" href="styles/components/growl-notifications.css">
+        <!--endbuild-->
+
+        <!-- build:js({.tmp,app}) js/bs-modal.min.js-->
+        <script src="scripts/components/BsModalComponent.js"></script>
+        <script src="scripts/bs-modal.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) js/bs-wizard.min.js-->
+        <script src="scripts/components/BsWizardComponent.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) js/bs-wizard.min.js-->
+        <script src="scripts/components/BsWizardComponent.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) js/bs-list-group.min.js-->
+        <script src="scripts/components/BsListGroupComponent.js"></script>
         <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) showcase/scripts/showcase.js -->
@@ -123,6 +153,8 @@
           ga('send', 'pageview');
 
         </script>
+
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
 
 </body>

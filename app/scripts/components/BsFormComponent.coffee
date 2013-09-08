@@ -6,8 +6,9 @@
 Bootstrap.BsFormComponent = Ember.Component.extend
 	tagName: 'form'
 	classNamesBinding: ['isDefaultLayout:form:', 'isInline:form-inline:', 'isHorizontal:form-horizontal:']
-	attributesBinding: ['role']
+	attributesBinding: ['role', 'name']
 	role: 'form'
+	name: null
 	# the layout is saved in this property and isXxx getter and setters are bound to it so that
 	# setting one unset others etc...
 	layout: 'default'

@@ -1,0 +1,10 @@
+{{#if hasLabel}}
+	{{#if _isYieldInsideLabel}}
+		{{#bs-form-label text=labelText}}{{yield}}{{/bs-form-label}}
+	{{else}}
+		{{bs-form-label text=labelText}}
+	{{/if}}
+{{/if}}
+{{#if _hasYield}}
+	{{yield}}
+{{/if}}

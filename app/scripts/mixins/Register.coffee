@@ -2,6 +2,7 @@ Bootstrap = window.Bootstrap
 Bootstrap.Register = Ember.Mixin.create(
     init: ->
         @_super()
+        # Components
         @BsAlertComponent = Bootstrap.BsAlertComponent if Bootstrap.BsAlertComponent?
         @BsLabelComponent = Bootstrap.BsLabelComponent if Bootstrap.BsLabelComponent?
         @BsBadgeComponent = Bootstrap.BsBadgeComponent if Bootstrap.BsBadgeComponent?
@@ -12,4 +13,9 @@ Bootstrap.Register = Ember.Mixin.create(
         @BsBtnToolbarComponent = Bootstrap.BsBtnToolbarComponent if Bootstrap.BsBtnToolbarComponent?
         @BsProgressComponent = Bootstrap.BsProgressComponent if Bootstrap.BsProgressComponent?
         @BsProgressbarComponent = Bootstrap.BsProgressbarComponent if Bootstrap.BsProgressbarComponent?
+        # Forms
+        @BsFormComponent = Bootstrap.BsFormComponent if Bootstrap.BsFormComponent?
+        @BsFormGroupComponent = Bootstrap.BsFormGroupComponent if Bootstrap.BsFormGroupComponent?
+        @BsFormLabelomponent = Bootstrap.BsFormLabelomponent if Bootstrap.BsFormLabelomponent?
+        @BsFormInputComponent = Bootstrap.BsFormInputComponent if Bootstrap.BsFormInputComponent?
 )

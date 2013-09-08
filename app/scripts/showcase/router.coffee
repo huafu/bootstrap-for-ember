@@ -11,5 +11,6 @@ Showcase.Router.map(() ->
         @route 'progressbar'
         @route 'pills'
         @route 'tabs'
+        @route 'form'
         @route 'notifications'
 )

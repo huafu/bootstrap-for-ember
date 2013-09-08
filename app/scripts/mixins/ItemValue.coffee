@@ -12,7 +12,6 @@ Bootstrap.ItemValue = Ember.Mixin.create(
         if not itemsView?
             return
 
-        value = @get('content')
-        value
+        @get('content')
     ).property('content').cacheable()
 )

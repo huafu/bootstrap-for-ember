@@ -10,7 +10,6 @@
 }}
 ###
 Bootstrap.BsFormGroupComponent = Ember.Component.extend
-	tagName: 'div'
 	classNamesBinding: [
 		'isInput:form-group:', 'isSelect:form-group:', 'isTextarea:form-group:',
 		'isRadio:radio:', 'isCheckbox:checkbox:',

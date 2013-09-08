@@ -11,9 +11,9 @@
 ###
 Bootstrap.BsFormGroupComponent = Ember.Component.extend
 	classNamesBinding: [
-		'isInput:form-group:', 'isSelect:form-group:', 'isTextarea:form-group:',
-		'isRadio:radio:', 'isCheckbox:checkbox:',
-		'hasError', 'hasWarning', 'hasSuccess']
+		'isFormGroup:form-group:', 'isRadio:radio:', 'isCheckbox:checkbox:',
+		'hasError', 'hasWarning', 'hasSuccess'
+	]
 	# the type is saved in this property and isXxx getter and setters are bound to it so that
 	# setting one unset others etc...
 	type: null
@@ -22,6 +22,9 @@ Bootstrap.BsFormGroupComponent = Ember.Component.extend
 	isTextarea: Bootstrap.createBoundSwitchAccessor 'textarea', 'type', 'input'
 	isRadio: Bootstrap.createBoundSwitchAccessor 'radio', 'type', 'input'
 	isCheckbox: Bootstrap.createBoundSwitchAccessor 'checkbox', 'type', 'input'
+	isFormGroup: (() ->
+		@get('type') in [null, 'input', 'select', 'textarea']
+	).property 'type'
 	# label (setting to null or empty string will generate it but without text, same for the help text)
 	label: no
 	# help text under the field

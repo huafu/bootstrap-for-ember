@@ -11,7 +11,7 @@
 ###
 Bootstrap.BsFormGroupComponent = Ember.Component.extend
 	classNameBindings: [
-		'isFormGroup:form-group:', 'isRadio:radio:', 'isCheckbox:checkbox:',
+		'isFormGroup:form-group', 'isRadio:radio', 'isCheckbox:checkbox',
 		'hasError', 'hasWarning', 'hasSuccess'
 	]
 	# the type is saved in this property and isXxx getter and setters are bound to it so that
@@ -63,6 +63,21 @@ Bootstrap.BsFormGroupComponent = Ember.Component.extend
 	init: ->
 		@_super arguments...
 		@controlTypeObserver() unless @get('type')
+		@initControlView()
+
+	# preparing the field view
+	initControlView: ->
+		return unless (type = @get('controlType'))
+		[type, subType] = type.split /\./g
+		# BsFormInputView, BsFormSelectView, BsFormCheckbosView, BsFormRadioView
+		view = Bootstrap['BsForm' + type.substr(0, 1).toUpperCase() + type.substr(1) + 'View']
+		opt = {}
+		opt.type = subType if subType
+
+		@set '_controlView', view
+		@set '_controlViewOptions', opt
+
+
 
 
 	# private
@@ -76,6 +91,9 @@ Bootstrap.BsFormGroupComponent = Ember.Component.extend
 	# do we have to add {{yield}} outside of the label?
 	_hasYield: (->
 		not (@get('hasLabel') and @get('_isYieldInsideLabel'))
-	).property('_isYieldInsideLabel', 'hasLabel').readOnly
+	).property('_isYieldInsideLabel', 'hasLabel').readOnly()
+	# the form control view
+	_controlView: null
+	_controlViewOptions: {}
 
 

@@ -3,8 +3,7 @@
 ## Standard
 
 <div class="bs-example">
-    {{#bs-form}}
-    	{{bs-form-group controlType="input.text"}}
-    	some text
+    {{#bs-form name="testForm"}}
+    	{{bs-form-group controlType="input.text" controlName="text" label="Test input.text"}}
     {{/bs-form}}
 </div>

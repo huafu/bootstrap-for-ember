@@ -5,7 +5,7 @@
 ###
 Bootstrap.BsFormComponent = Ember.Component.extend
 	tagName: 'form'
-	classNamesBinding: ['formLayout']
+	classNameBindings: ['formLayout']
 	attributesBinding: ['role', 'name']
 	role: 'form'
 	name: null

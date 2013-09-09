@@ -10,7 +10,7 @@
 }}
 ###
 Bootstrap.BsFormGroupComponent = Ember.Component.extend
-	classNamesBinding: [
+	classNameBindings: [
 		'isFormGroup:form-group:', 'isRadio:radio:', 'isCheckbox:checkbox:',
 		'hasError', 'hasWarning', 'hasSuccess'
 	]
@@ -61,6 +61,7 @@ Bootstrap.BsFormGroupComponent = Ember.Component.extend
 
 	# initialize
 	init: ->
+		@_super arguments...
 		@controlTypeObserver() unless @get('type')
 
 

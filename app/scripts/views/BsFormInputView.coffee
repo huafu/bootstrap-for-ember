@@ -4,7 +4,7 @@
 	value="Some value"
 }}
 ###
-Bootstrap.BsFormInputComponent = SELF = Ember.TextField.extend Bootstrap.BsFormControlComponentMixin, 
+Bootstrap.BsFormInputView = SELF = Ember.TextField.extend Bootstrap.BsFormControlComponent, 
 	type: 'text'
 	# getter and setter for isText, isPassword, ... are set after the class declaration
 
@@ -21,4 +21,4 @@ for inputType in SELF.validInputTypes
 SELF.reopen mixin
 
 # Since we're extending TextField we need to register ourself
-Ember.Handlebars.registerHelper 'bs-form-input', Bootstrap.BsFormInputComponent
+Ember.Handlebars.registerHelper 'bs-form-input', Bootstrap.BsFormInputView
